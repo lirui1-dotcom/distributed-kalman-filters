@@ -12,11 +12,8 @@ The Distributed Kalman Filter extends the information form of the Kalman filter 
 
 ### How It Works
 
-**Dynamic Average Consensus** is an extension of Static Average Consensus (SAC). While SAC drives states to the average of initial values, DAC extends this to time-varying signals. By reformulating the information form Kalman filter equations, DAC can be integrated to enable distributed estimation across multiple agents.
+**Dynamic Average Consensus** is an extension of Static Average Consensus (SAC). While SAC drives states to the average of initial values, DAC extends this to track N time-varying signals. By reformulating the information form Kalman filter equations, DAC can be integrated to enable distributed estimation across multiple agents.
 
-**High-pass DAC** is more practical and theoretically robust, with a solid foundation independent of network density ([Tutorial on Dynamic Average Consensus](#references)).
- 
-**Low-pass DAC** is simpler to implement but relies on network density (number of nodes), which can limit its applicability in sparse networks.
 
 ### References
 
