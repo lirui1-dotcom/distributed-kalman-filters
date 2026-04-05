@@ -2,16 +2,13 @@
 
 Implementation of distributed Kalman Filter algorithms for multi-agent systems and sensor networks using MATLAB/Simulink.
 
-### Requirements
-
-- **MATLAB** (R2022b or later)
-- **Simulink** (v2022b or later)
+![MATLAB](https://img.shields.io/badge/MATLAB-R2022b%2B-blue?logo=mathworks) ![Simulink](https://img.shields.io/badge/Simulink-v2022b%2B-orange?logo=simulink)
 
 ### Overview
 
 The Distributed Kalman Filter extends the information form of the Kalman filter by incorporating a **Dynamic Average Consensus (DAC)** algorithm to share information across distributed agents. There are two main variants:
 - **High-pass DAC**: More robust and theoretically grounded
-- **Low-pass DAC**: Simpler but network-density dependent
+- **Low-pass DAC**: Ideal for noise reduction but network-density dependent
 
 ### How It Works
 
