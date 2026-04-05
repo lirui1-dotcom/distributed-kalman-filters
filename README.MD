@@ -6,13 +6,14 @@ Implementation of distributed Kalman Filter algorithms for multi-agent systems a
 
 ### Overview
 
-The Distributed Kalman Filter extends the information form of the Kalman filter by incorporating a **Dynamic Average Consensus (DAC)** algorithm to share information across distributed agents. There are two main variants:
+
+The Distributed Kalman Filter (DKF) builds on the information form of the Kalman filter (IKF), incorporating two **Dynamic Average Consensus (DAC)** filters to share information across sensors nodes in a fully distributed way. There are two main DAC approaches:
 - **High-pass DAC**: More robust and theoretically grounded
 - **Low-pass DAC**: Ideal for noise reduction but network-density dependent
 
 ### How It Works
 
-**Dynamic Average Consensus** is an extension of Static Average Consensus (SAC). While SAC drives states to the average of initial values, DAC extends this to track N time-varying signals. By reformulating the information form Kalman filter equations, DAC can be integrated to enable distributed estimation across multiple agents.
+**Dynamic Average Consensus (DAC)** is an extension of the Static Average Consensus (SAC). While SAC drives states to the average of initial values, DAC extends this to track the average of N time-varying signals. By premultiplying the information form Kalman filter update equations by 1/N, DAC can be seamlessly integrated into IKF for distributed state estimation.
 
 
 ### References
@@ -28,7 +29,7 @@ The Distributed Kalman Filter extends the information form of the Kalman filter 
 - DYNAMIC CONSENSUS FOR MOBILE NETWORKS
 - Tutorial on Dynamic Average Consensus
 
-### Testing Network Density Effects
+### Testing Network Density Effects for LP-DAC
 
 To observe how network density affects performance, open `LowPass.slx` and modify the number of nodes in:  
 `Modelling → Model Settings → Model properties → Callbacks → InitFcn`
